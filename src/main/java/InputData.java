@@ -8,16 +8,12 @@ public class InputData {
         size = data.length * data[0].length;
     }
 
-    public double getValueWithXandY(int x, int y){
-        return data[x][y];
-    }
-
-    public double getValueWithIndex(int index){
-        int numberOfRows = data.length;
+    // TODO: Aufgabe 5)
+    public double getValueByIndex(int index){
         int numberOfColumns = data[0].length;
 
-        int row = index/numberOfRows;
-        int column = index%numberOfRows;
+        int row = index/numberOfColumns;
+        int column = index%numberOfColumns;
 
         return data[row][column];
     }
