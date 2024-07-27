@@ -3,6 +3,7 @@ import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
+        
 
         NetworkNode a = new NetworkNode();
         NetworkNode b = new NetworkNode();

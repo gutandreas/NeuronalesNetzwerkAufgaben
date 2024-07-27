@@ -13,11 +13,11 @@ public class NeuralNetwork {
     }
 
     public void startCalculation(InputData inputData){
-        inputLayer.startCalculation(inputData);
+        inputLayer.triggerCalculationInNodes(inputData);
         for (int i = 0; i < hiddenLayers.size(); i++) {
-            hiddenLayers.get(i).startCalculation();
+            hiddenLayers.get(i).triggerCalculationInNodes();
         }
-        outputLayer.startCalculation();
+        outputLayer.triggerCalculationInNodes();
     }
 
     public void connectLayersWithEdges(Layer layer1, Layer layer2, double[][] weights){

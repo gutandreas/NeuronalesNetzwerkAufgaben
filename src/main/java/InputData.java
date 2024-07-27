@@ -8,7 +8,7 @@ public class InputData {
         size = data.length * data[0].length;
     }
 
-    // TODO: Aufgabe 5)
+    // TODO: Aufgabe 5) Implementiere die Methode so, dass über einen Index auf das Array zugegriffen wird
     public double getValueByIndex(int index){
         int numberOfColumns = data[0].length;
 

@@ -1,6 +1,6 @@
 public class InputLayer extends Layer {
 
-    public void startCalculation(InputData inputData){
+    public void triggerCalculationInNodes(InputData inputData){
 
         System.out.println("----Inputlayer----");
 

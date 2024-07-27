@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Layer {
+public abstract class Layer {
 
     protected LinkedList<NetworkNode> nodes = new LinkedList<>();
     public void addNode(NetworkNode networkNode){

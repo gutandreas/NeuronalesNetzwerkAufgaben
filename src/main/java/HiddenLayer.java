@@ -1,6 +1,6 @@
 public class HiddenLayer extends Layer {
 
-    public void startCalculation(){
+    public void triggerCalculationInNodes(){
 
         System.out.println("----Hiddenlayer----");
 

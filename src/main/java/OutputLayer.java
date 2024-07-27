@@ -1,6 +1,6 @@
 public class OutputLayer extends Layer {
 
-    public void startCalculation(){
+    public void triggerCalculationInNodes(){
         double maxOutput = 0;
         int maxOutputIndex = 0;
 
