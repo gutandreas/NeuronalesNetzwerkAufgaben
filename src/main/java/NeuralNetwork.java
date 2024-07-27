@@ -2,9 +2,9 @@ import java.util.LinkedList;
 
 public class NeuralNetwork {
 
-    InputLayer inputLayer;
-    LinkedList<HiddenLayer> hiddenLayers;
-    OutputLayer outputLayer;
+    private InputLayer inputLayer;
+    private LinkedList<HiddenLayer> hiddenLayers;
+    private OutputLayer outputLayer;
 
     public NeuralNetwork(InputLayer inputLayer, LinkedList<HiddenLayer> hiddenLayers, OutputLayer outputLayer) {
         this.inputLayer = inputLayer;
