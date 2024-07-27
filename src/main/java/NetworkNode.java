@@ -16,11 +16,7 @@ public class NetworkNode {
 
     //TODO: Aufgabe 4) Berechne den Output mit der Sigmoid-Funktion und setze die Instanzvariable 'output' auf das Resultat
     public void calculateOutput(){
-        double sum = 0;
-        for (NetworkEdge edge : inputEdges){
-            sum += edge.getFrom().getOutput() * edge.getWeight();
-        }
-        output = 1 / (1 + Math.exp(-sum));
+
     }
 
     public void setOutput(double output){

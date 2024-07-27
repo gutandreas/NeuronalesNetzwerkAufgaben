@@ -10,12 +10,9 @@ public class InputData {
 
     // TODO: Aufgabe 5) Implementiere die Methode so, dass über einen Index auf das Array zugegriffen wird
     public double getValueByIndex(int index){
-        int numberOfColumns = data[0].length;
 
-        int row = index/numberOfColumns;
-        int column = index%numberOfColumns;
 
-        return data[row][column];
+        return 0; // Steht nur da, damit es keinen Fehler anzeigt. Muss bei der Implementierung ersetzt werden...
     }
 
     public int getSize() {
