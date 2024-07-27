@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
-public class HiddenLayerTests {
+public class OutputLayerTests {
 
     @Test
     public void testTriggerCalculationInNodes(){
@@ -38,8 +38,14 @@ public class HiddenLayerTests {
         LinkedList<HiddenLayer> hiddenLayers = new LinkedList<>();
         hiddenLayers.add(hiddenLayer);
 
+        NetworkNode l = new NetworkNode();
+        NetworkNode m = new NetworkNode();
 
-        NeuralNetwork neuralNetwork = new NeuralNetwork(inputLayer, hiddenLayers, null);
+        OutputLayer outputLayer = new OutputLayer();
+        outputLayer.addNode(l);
+        outputLayer.addNode(m);
+
+        NeuralNetwork neuralNetwork = new NeuralNetwork(inputLayer, hiddenLayers, outputLayer);
 
         double[][] weightsArrayInputLayerHiddenLayer = {
                 {0.94, -0.84},
@@ -59,6 +65,7 @@ public class HiddenLayerTests {
         };
 
         neuralNetwork.connectLayersWithEdges(inputLayer, hiddenLayers.get(0), weightsArrayInputLayerHiddenLayer);
+        neuralNetwork.connectLayersWithEdges(hiddenLayers.get(0), outputLayer, weightsArrayHiddenLayerOutputLayer);
 
         double inputArrayZahl[][] = {
                 {1.0, 1.0, 1.0},
@@ -67,13 +74,12 @@ public class HiddenLayerTests {
 
         InputData inputData = new InputData(inputArrayZahl);
 
-        inputLayer.triggerCalculationInNodes(inputData);
-        hiddenLayer.triggerCalculationInNodes();
+        neuralNetwork.startCalculation(inputData);
 
-        double result1 = 0.027652422322823136;
-        double result2 = 0.9846322944347244;
+        double result1 = 0.6448003568329543;
+        double result2 = 0.2793503037842913;
 
-        Assertions.assertEquals(result1, j.getOutput());
-        Assertions.assertEquals(result2, k.getOutput());
+        Assertions.assertEquals(result1, l.getOutput());
+        Assertions.assertEquals(result2, m.getOutput());
     }
 }
